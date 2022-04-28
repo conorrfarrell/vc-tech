@@ -14,11 +14,18 @@
 - If you have node already installed navigate to `payouts`
 - Update the env file so that it can access your local MySQL
 - Update payout transaction limit in the env file if needed
-- Run Init API request below
 - Run `yarn install`
-- Run `yarn init` - this will create all the tables and add some dummy data in
 - Run `yarn start`
+- Run Init API request below
 - Navigate to your desired API tool and use the API calls below.
+
+## Steps to test with API
+
+Using API titles here for more clarity
+
+- `Get all payouts waiting to be created` This will give you a list of soldItems by their itemIds.
+- Use all or a couple of these `itemIds` in the `Trigger new payouts to be created for a particular seller` This will create new payout(s) convert to appropriate currency
+- Use `Get all payouts by a seller reference` To get a detail description of the payouts associated to a seller
 
 ## API Reference
 
@@ -113,3 +120,6 @@ INSERT INTO Item VALUES (6, "Purple shoes", "EUR", "500", "BURB123", null);
 
 ## With more time and for next time
 - Docker integration so a Docker SQL driver can be used
+- Move init to package script
+- More API calls to build service
+- Seperate seller data from payouts data create microservices where appropriate (Hence the usage of payouts folder)
