@@ -10,15 +10,25 @@
 ## Setup
 
 - Clone the repository
+- In your MySQL create a database called VC_TECH_TEST
 - If you have node already installed navigate to `payouts`
 - Update the env file so that it can access your local MySQL
 - Update payout transaction limit in the env file if needed
+- Run Init API request below
 - Run `yarn install`
 - Run `yarn init` - this will create all the tables and add some dummy data in
 - Run `yarn start`
 - Navigate to your desired API tool and use the API calls below.
 
 ## API Reference
+
+#### Initialise all tables and basic data
+
+```http
+  POST /init
+```
+
+No data
 
 #### Get all payouts by a seller reference
 
@@ -100,3 +110,6 @@ INSERT INTO Item VALUES (4, "Red shoes", "GBP", "200", "BURB123", null);
 INSERT INTO Item VALUES (5, "Yellow shoes", "EUR", "50", "BURB123", null);
 INSERT INTO Item VALUES (6, "Purple shoes", "EUR", "500", "BURB123", null);
 ```
+
+## With more time and for next time
+- Docker integration so a Docker SQL driver can be used
