@@ -1,0 +1,43 @@
+{
+  "name": "payouts-api",
+  "version": "1.0.0",
+  "description": "Vestiaire Collective tech test",
+  "main": "index.ts",
+  "author": "conorrfarrell@hotmail.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "jest": {
+    "testPathIgnorePatterns": [
+      "__fixtures__"
+    ],
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "start": "ts-node lib/api/routes/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "easy-currencies": "^1.7.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/mysql": "^2.15.21",
+    "@types/supertest": "^2.0.11",
+    "@types/uuid": "^8.3.4",
+    "jest": "^26.6.3",
+    "supertest": "^6.0.1",
+    "typescript": "^4.4.3"
+  }
+}
