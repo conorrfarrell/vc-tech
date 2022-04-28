@@ -55,7 +55,7 @@ router.post('/:sellerReference', validate(bodySchema, 'body'), async (req: Reque
       const item = await itemModel.findOne(itemId, sellerInfo);
       return item;
     }));
-
+    
     // sort to minimise the amount of payouts
     await items.sort((a, b) => Number(a.amount) - Number(b.amount));
 
